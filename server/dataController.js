@@ -10,6 +10,8 @@ module.exports = {
   };
     axios.post("https://api.fullcontact.com/v3/person.enrich", userBody,config)
        .then(response => res.status(200).send(response.data))
-       .catch(err => console.log(err));
+       .catch(err => {
+        console.log(err)
+        res.status(err.response.status).send("problems retrieving profile")});
     }
 }
