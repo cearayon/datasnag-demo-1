@@ -3,11 +3,14 @@ import axios from 'axios'
 import {setNewQueriedUser} from '../redux/querySlice'
 import { useDispatch } from 'react-redux'
 import Results from './Results'
+import { useNavigate } from 'react-router-dom';
+
 
 const Landing = () => {
   const [userInput, setUserInput] = useState("")
 
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
 
   let handleClick = (info)=>{
@@ -18,6 +21,7 @@ const Landing = () => {
     axios.post("http://localhost:5000/api/user_data", userInfo).then(res=>{
       console.log(res.data)
       dispatch(setNewQueriedUser(res.data))
+      navigate('/results')
     })
   }
   return (

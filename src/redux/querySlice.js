@@ -17,7 +17,9 @@ export const querySlice = createSlice({
 
 export const {setNewQueriedUser, deleteQueriedUser} = querySlice.actions
 
-export const selectQueriedUser = (state)=>state.currentQuery.value
+export const selectQueriedUser = (state)=>{
+  console.log(state)
+  return state.value}
 
 export default querySlice.reducer
 
