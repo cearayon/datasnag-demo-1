@@ -6,6 +6,7 @@ export const querySlice = createSlice({
     value: {fullName: "John Doe", gender: "Male", location: "Argentina"}}, 
   reducers: {
     setNewQueriedUser: (state, action)=>{
+      console.log("action was hit", action.payload)
       state.value = action.payload
     }, 
     deleteQueriedUser:(state)=>{
@@ -19,3 +20,5 @@ export const {setNewQueriedUser, deleteQueriedUser} = querySlice.actions
 export const selectQueriedUser = (state)=>state.currentQuery.value
 
 export default querySlice.reducer
+
+// use redux-persist?
