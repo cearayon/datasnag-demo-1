@@ -10,7 +10,7 @@
 }
 
 .Landing{
-  height: 80vh;
+  height: 60vh;
   width: 100%;
   border: 1px solid red;
   display: flex;
@@ -20,6 +20,10 @@
 
   color: limegreen;
   padding: 30px
+}
+
+.catchphrase {
+  margin-bottom: 30px;
 }
 
 .info-input{
@@ -35,6 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
 .App-logo {
